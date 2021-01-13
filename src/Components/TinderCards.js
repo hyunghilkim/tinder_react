@@ -10,11 +10,10 @@ function TinderCards() {
 		database.collection('people').onSnapshot((snapshot) => {
 			setPeople(snapshot.docs.map((doc) => doc.data()));
 		});
-	}, [People]);
+	}, []);
 
 	return (
 		<div>
-			<h1>Tinder Cards</h1>
 			<div className="tinderCards__cardContainer">
 				{People.map((person, index) => {
 					return (
